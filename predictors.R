@@ -22,10 +22,11 @@ occurs = read.csv('occurrences/pointsForModelling.csv')
 
 # скачиваем слои WorldClim
 wClim = worldclim_country(var = 'bio', country = 'RU', res = 2.5, 
-        path = '/media/carabus/Enterprise/EW_SDM/predictors/meteo/rasters/wolrdClim/')
+        path = '/media/carabus/Enterprise/EW_SDM/predictors/meteo/rasters/wolrdClim/source/')
 
 # если по какой-то причине загрузка данных не работает - надо загрузить 
 # биоклиматические слои разрешением 2.5 минуты со страницы https://www.worldclim.org/data/worldclim21.html 
+# и распаковать архив в директорию predictors/meteo/rasters/wolrdClim/source/
 
 # территория интереса
 aoi = read_sf('navigation/Russia_European_albers.shp')
